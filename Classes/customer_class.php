@@ -7,7 +7,7 @@ class Customer extends Connection{
     //methods
 //add customer
     function add_cust($name, $email, $password, $country, $city, $contact){
-        return $this->query("insert into customer(customer_name, customer_email, customer_pass, customer_country, customer_city, customer_contact, customer_image) VALUES ('$name', '$email', '$password', '$country', '$city', '$contact')");
+        return $this->query("insert into customer(customer_name, customer_email, customer_pass, customer_country, customer_city, customer_contact) VALUES ('$name', '$email', '$password', '$country', '$city', '$contact')");
     }
 //check login details
     function check_login_details($email){
@@ -32,6 +32,11 @@ class Customer extends Connection{
 
     }
 
+    // function sign_up($name, $email, $password){
+    //     return $this->query("insert into customer(customer_name, customer_email, customer_pass) values ('$name', '$email', '$password')");
+    // }
+
 }
+
 
 ?>

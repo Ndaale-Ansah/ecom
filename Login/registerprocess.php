@@ -4,7 +4,7 @@ require('../Controllers/customer_controller.php');
 
 
 if(isset($_POST['registerCustomer'])){
-
+//retrieving customer information
     $name = $_POST["name"];
     $email = $_POST["email"];
     $password = $_POST["password"];
@@ -19,8 +19,7 @@ if(isset($_POST['registerCustomer'])){
 
     $result = add_customer_controller($name, $email, $encryptedPass, $country, $city, $contact);
 
-    if($result === true)
-    {
+    if($result === true){
         echo header("location: ../Login/login.php");
     }
 }

@@ -53,6 +53,12 @@ function select_one_customer_controller($id){
     // call the method from the class
     return $customer_instance->select_one_cust($id);
 
+
 }
+
+// function sign_up_controller($name, $email, $password){
+//  $new_person = new Customer();
+//  return $new_person->sign_up($name, $email, $password);
+// }
 
 ?>
